@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table {
+        display: flex;
+        justify-content: left;
+        margin-top: 10em;
+        margin-left: 10em;
+      }
+      .button {
+        display: block;
+        width: 70px;
+        height: 15px;
+        background: #4e9caf;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-weight: small;
+        line-height: 25px;
+      }
+      .delete {
+        float: right;
+        margin-right: 15em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <table border="1">
+        <tr>
+          <th>My list</th>
+        </tr>
+        {% for _data in data %}
+        <tr>
+          <td>{{_data[0]}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div class="delete">
+      <a class="button" href="/delete">delete</a>
+    </div>
+    <div class="deleted">
+        <label>{{info}}</label>
+    </div>
+  </body>
+</html>

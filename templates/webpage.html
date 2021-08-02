@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My To do list</title>
+    <style>
+      .user-heading {
+        display: flex;
+        justify-content: center;
+      }
+      .todo-heading {
+        display: flex;
+        justify-content: center;
+        font-size: xx-large;
+      }
+      .enter-data {
+        padding: 3em;
+      }
+      .display-data {
+        justify-content: center;
+        display: flex;
+        float: right;
+        margin-right: 13em;
+      }
+      .info {
+        margin-left: 7em;
+        font-size: x-large;
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="user-heading">
+      <h1>Welcome {{user}}</h1>
+    </div>
+    <div class="todo-heading">
+      <label>Todo List</label>
+    </div>
+    <div class="enter-data">
+      <form action="/addData" method="POST">
+        <label for="data">Enter the Info</label>
+        <input type="text" name="data" />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+    <div class="display-data">
+      <a href="/display" >display data</a>
+    </div>
+    <div class="info">
+      <label for="info">{{info}}</label>
+    </div>
+  </body>
+</html>
